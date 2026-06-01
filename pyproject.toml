@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pipecat-agent"
+version = "0.1.0"
+description = "AI Voice Agent using Pipecat, Sarvam STT/TTS, and Gemini LLM"
+requires-python = ">=3.10"
+dependencies = [
+    "pipecat-ai[openai,sarvam,silero,webrtc]==1.2.1",
+    "pipecat-ai-small-webrtc-prebuilt==2.5.0",
+    "python-dotenv==1.2.2",
+    "loguru==0.7.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.4.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
