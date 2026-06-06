@@ -26,7 +26,7 @@ load_dotenv(override=True)
 if not os.getenv("SARVAM_API_KEY"):
     raise ValueError("SARVAM_API_KEY not found in .env")
 
-if not os.getenv("GWOQ_API_KEY"):
+if not os.getenv("GROQ_API_KEY"):
     raise ValueError("GROQ_API_KEY not found in .env")
 
 # ── Full System Prompt ─────────────────────────────────────────────────────────
